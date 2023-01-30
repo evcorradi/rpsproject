@@ -9,7 +9,8 @@ function scoreboard () {
     OLED.writeStringNewLine("Rounds: " + Rounds)
 }
 input.onButtonPressed(Button.A, function () {
-    OLED.writeStringNewLine("A")
+    basic.showString("A")
+    basic.pause(2000)
     PA = 1
     scoreboard()
 })
