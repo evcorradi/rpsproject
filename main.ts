@@ -8,6 +8,11 @@ function scoreboard () {
     OLED.newLine()
     OLED.writeStringNewLine("Rounds: " + Rounds)
 }
+input.onButtonPressed(Button.A, function () {
+    OLED.writeStringNewLine("A")
+    PA = 1
+    scoreboard()
+})
 let Rounds = 0
 let Ties = 0
 let PB = 0
