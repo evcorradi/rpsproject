@@ -20,20 +20,23 @@ function resetGame () {
 }
 input.onButtonPressed(Button.A, function () {
     basic.showString("A")
-    basic.pause(2000)
-    PA = 1
+    basic.pause(1000)
+    PA += 1
+    Rounds += 1
     scoreboard()
 })
 input.onButtonPressed(Button.AB, function () {
     basic.showString("T")
-    basic.pause(2000)
-    Ties = 1
+    basic.pause(1000)
+    Ties += 1
+    Rounds += 1
     scoreboard()
 })
 input.onButtonPressed(Button.B, function () {
     basic.showString("B")
-    basic.pause(2000)
-    PB = 1
+    basic.pause(1000)
+    PB += 1
+    Rounds += 1
     scoreboard()
 })
 input.onGesture(Gesture.Shake, function () {
