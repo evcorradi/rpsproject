@@ -21,6 +21,7 @@ function resetGame () {
 input.onButtonPressed(Button.A, function () {
     basic.showString("A")
     basic.pause(1000)
+    basic.clearScreen()
     PA += 1
     Rounds += 1
     scoreboard()
@@ -28,6 +29,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     basic.showString("T")
     basic.pause(1000)
+    basic.clearScreen()
     Ties += 1
     Rounds += 1
     scoreboard()
@@ -35,6 +37,7 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     basic.showString("B")
     basic.pause(1000)
+    basic.clearScreen()
     PB += 1
     Rounds += 1
     scoreboard()
