@@ -26,7 +26,7 @@ input.onButtonPressed(Button.A, function () {
     Rounds += 1
     scoreboard()
 })
-input.onGesture(Gesture.FreeFall, function () {
+input.onGesture(Gesture.TiltLeft, function () {
     rps = randint(1, 3)
     if (rps == 1) {
         OLED.writeStringNewLine("rock")
