@@ -1,3 +1,15 @@
+input.onPinPressed(TouchPin.P0, function () {
+    rps = randint(1, 3)
+    if (rps == 1) {
+        OLED.writeStringNewLine("rock")
+    }
+    if (rps == 1) {
+        OLED.writeStringNewLine("scissors")
+    }
+    if (rps == 1) {
+        OLED.writeStringNewLine("paper")
+    }
+})
 function scoreboard () {
     OLED.clear()
     OLED.writeStringNewLine("Player A: " + PA)
@@ -26,18 +38,6 @@ input.onButtonPressed(Button.A, function () {
     Rounds += 1
     scoreboard()
 })
-input.onGesture(Gesture.TiltLeft, function () {
-    rps = randint(1, 3)
-    if (rps == 1) {
-        OLED.writeStringNewLine("rock")
-    }
-    if (rps == 1) {
-        OLED.writeStringNewLine("sissors")
-    }
-    if (rps == 1) {
-        OLED.writeStringNewLine("paper")
-    }
-})
 input.onButtonPressed(Button.AB, function () {
     basic.showString("T")
     basic.pause(1000)
@@ -58,10 +58,10 @@ input.onGesture(Gesture.Shake, function () {
     OLED.init(128, 64)
     resetGame()
 })
-let rps = 0
 let Rounds = 0
 let Ties = 0
 let PB = 0
 let PA = 0
+let rps = 0
 OLED.init(128, 64)
 resetGame()
